@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タsスk蜉ｩ縺代※縺上l蜷梧悄逕溘</title>
+    <style>
+        @font-face {
+            font-family: 'myfont';
+            src: url('../font/obake.TTF') format('truetype');
+        }
+        body {
+            background-color: black;
+            cursor: pointer;
+        }
+        #text {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: 'myfont', sans-serif;
+            font-size: 250%;
+        }
+    </style>
+</head>
+<body onload="printMoji()">
+    <div id="text">
+        <script type="text/javascript">
+            // インクリメント用
+            var i = 0;
+            // ループ回数設定
+            var roop = 170;
+            // カウント
+            var cnt = 0;
+            // 文字の出現スピード調整
+            var time = 0;
+            // 制限時間
+            var settime = 7;
+            // 出現文字
+            var moji="タスケテ";
+            var printString="タスケテ";
+            
+            // 画面上に文字を出現させる関数
+            function printMoji() {
+                // 文字の出力
+                document.getElementById("text").innerText=moji.substring(0,i++);
+                // 繰り返しの処理
+                if(i == moji.length) {
+                    // 文字の延長
+                    moji = moji + printString;
+                    // ループ回数の管理
+                    if(cnt == roop){
+                        // 時間経過後に処理を実行
+                        setTimeout(function(){
+                            window.location.href = 'horror_3sta_redface.html';
+                        }, settime*1000);
+                    }else{
+                        cnt = cnt + 1;
+                        // 出力スピードの管理
+                        if(time <=  480){
+                            time = time + 30; 
+                        }
+                        // 再帰
+                        setTimeout("printMoji()",500-time);
+                    }
+                }else{
+                    // 再帰
+                    setTimeout("printMoji()",500-time);    
+                }
+            }
+        </script>
+    </div>    
+</body>
+</html>

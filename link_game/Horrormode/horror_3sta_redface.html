@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wh蜷i梧t悄er逕溘</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .horror{
+            height: 100vh; /* 全画面表示 */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-image: url(../photo/horror.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="horror"></div>
+    <script>
+        // 制限時間
+        var settime = 0.7;
+        // 時間経過後に処理を実行させる
+        setTimeout(function(){
+            window.location.href = 'horror_4sta_lie.html';
+        }, settime*1000);
+    </script>
+</body>
+</html>

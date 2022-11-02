@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第2ステージ</title>
+    <style>
+        body {
+            background-color: black;
+            cursor: pointer;
+        }
+
+        h1 {
+            color: white;
+            cursor: pointer;
+        }
+
+        #clear_ans{
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>第2ステージ:逃げるボタン</h1>
+    <p></p>
+    <script type="text/javascript">
+        var cnt = 0;
+        // 乱数を生み出し出現位置をランダムにする
+        function escapeButton() {
+            // 乱数
+            let ran1 = Math.floor(Math.random() * 500);
+            let ran2 = Math.floor(Math.random() * 500);
+            cnt = cnt + 1;
+
+            if (cnt % 50 == 0) {
+                alert("Tabキーを使ってみてね");
+            }
+
+            // 出現位置
+            document.getElementById("btn").style.top = ran1 + "px";
+            document.getElementById("btn").style.left = ran2 + "px";
+        }
+    
+        function nextStage(){
+            // 別のHTMLページへ移動する
+            location.href = "normal_3blue.html";
+        }
+    
+    </script>    
+    <br><Button id="btn" style="position:absolute;" onmouseover="escapeButton()" onclick="nextStage()">逃げます</Button></br>  
+</body>
+</html>

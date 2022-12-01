@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kigo {
+            width: 50px;
+        }
+    </style>
+    <script>
+        function pushButton() {
+            // 左の数字を取る
+            let num1 = document.getElementById("num1").value;
+            let num_check = 0;
+            if (isNaN(num1)) {
+                num_check = 1;
+            } else {
+                num1 = parseInt(num1, 10);
+            }
+
+            // 右の数字を取る
+            let num2 = document.getElementById("num2").value;
+            if (isNaN(num2)) {
+                num_check = 1;
+            } else {
+                num2 = parseInt(num2, 10);
+            }
+
+            // 記号を取る
+            let kigo = document.getElementById("kigo").value;
+
+            // 結果
+            let result = 0;
+            
+            if (num_check == 1) {     
+                result = "Error";
+                alert("数値以外が入力されていませんか？");
+            } else {
+                if (kigo == "+") {
+                    result = num1 + num2;
+                } else if (kigo == "-") {
+                    result = num1 - num2;
+                } else if (kigo == "*") {
+                    result = num1 * num2;
+                } else if (kigo == "/") {
+                    result = Math.floor(num1 / num2);
+                } else {
+                    result = "Error";
+                    alert("正しい記号を入力してください");
+                }
+            }
+            document.getElementById("result").value = result;
+        }
+    </script>
+</head>
+<body>
+    <input id="num1" type="text">
+    <input id="kigo" type="text">
+    <input id="num2" type="text">
+    <button onclick="pushButton()">=</button>
+    <input id="result" type="text">
+    <h4>説明</h4>
+    <p>1枠目_数値</p>
+    <p>2枠目_記号</p>
+    <p>3枠目_数値</p>
+    <p>4枠目_計算結果</p>
+    <p>数値と記号をいれた状態で＝ボタンを押すと計算結果を出力します</p>
+</body>
+</html>

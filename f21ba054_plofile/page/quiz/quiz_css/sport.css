@@ -1,0 +1,34 @@
+body {
+    background-color: aqua;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-size: 250%;
+    text-align: center;
+    margin: none;
+    color: white;
+    background-color: yellowgreen;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    width: 10em;
+    height:3em;
+    margin: 15px;
+    font-size: 150%;
+    color: white;
+    background-color: yellowgreen;
+    border-color: yellowgreen;
+}
+
+.btn:hover {
+    opacity: 0.6;
+}

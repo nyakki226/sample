@@ -1,0 +1,34 @@
+body {
+    background-color: aliceblue;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-size: 250%;
+    text-align: center;
+    margin: none;
+    color: white;
+    background-color: plum;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    width: 10em;
+    height:3em;
+    font-size: 120%;
+    margin: 15px;
+    color: white;
+    background-color: plum;
+    border-color: plum;
+}
+
+.btn:hover {
+    opacity: 0.6;
+}

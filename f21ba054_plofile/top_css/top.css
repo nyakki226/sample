@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    font-size: 300%;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.12em;
+}
+h2 {
+    font-size: 280%;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.12em;
+}
+h3 {
+    font-style: italic;
+    color: white;
+    text-align: center;
+}
+hr {
+    padding: 10px 0;
+    border: none;
+    border-top: 1px solid white;
+}
+a {
+    color: white;
+}
+p {
+    font-size: 150%;
+    color: white;
+}
+
+.btn {
+    width: 10em;
+    height:3em;
+    font-size: 50%;
+    color: black;
+    background-color: black;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+#name {
+    font-size: 25px;
+    border: none;
+    background-color: black;
+    color: white;
+}
